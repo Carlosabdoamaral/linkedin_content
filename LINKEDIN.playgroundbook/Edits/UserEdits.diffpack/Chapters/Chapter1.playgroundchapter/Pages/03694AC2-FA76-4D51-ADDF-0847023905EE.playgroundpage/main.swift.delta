@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/Template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>/*
+ https://codeforces.com/problemset/problem/112/A
+ Little Petya loves presents. His mum bought him two strings of the same size for his birthday. The strings 
+ consist of uppercase and lowercase Latin letters. Now Petya wants to compare those two strings 
+ lexicographically. The letters' case does not matter, that is an uppercase letter is considered equivalent to 
+ the corresponding lowercase letter. Help Petya perform the comparison.
+ 
+ Input
+ Each of the first two lines contains a bought string. The strings' lengths range from 1 to 100 inclusive. It 
+ is guaranteed that the strings are of the same length and also consist of uppercase and lowercase Latin 
+ letters.
+ 
+ Output
+ If the first string is less than the second one, print "-1". If the second string is less than the first one, 
+ print "1". If the strings are equal, print "0". Note that the letters' case is not taken into consideration 
+ when the strings are compared.
+ */
+
+func petyaAndStrings(s1:String, s2:String) -&gt; Int {
+    var x : [String] = []
+    var y : [String] = []
+    var xCountIsGreater : Bool = false 
+    var checks : [Bool] = []
+    
+    for c in s1 {
+        var ch : String = c.uppercased()
+        x.append(ch)
+    }
+    
+    for c in s2 {
+        var ch : String = c.uppercased()
+        y.append(ch)
+    }
+    
+    if x.count &gt;= y.count { xCountIsGreater = true }
+    
+    if xCountIsGreater {
+        for i in 0..&lt;x.count {
+            if y[i] != nil {
+                print(y[i])
+            }
+        }
+    }
+    
+    return 0
+}
+
+petyaAndStrings(s1: "abas", s2: "Abz")
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1568}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

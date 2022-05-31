@@ -47,6 +47,7 @@
  */
 
 func matrix(coordinate: [Int]) {
+    // VARIAVEIS
     let center : [Int] = [2,2] 
     var moves : Int = 0
     var m : [[Int]] = []
@@ -54,10 +55,12 @@ func matrix(coordinate: [Int]) {
     var xPos : Int = coordinate[0]
     var yPos : Int = coordinate[1]
     
+    // ADICIONANDO PRIMEIRAS COLUNAS E LINHAS DA MATRIZ
     for _ in 1...5 {
         m.append([0,0,0,0,0])
     }
     
+    // ADICIONANDO O NÚMERO 1 ONDE O USUÁRIO PASSOU AS COORDENADAS
     for c in 1...m.count {
         if c == xPos {
             for r in 1...m.count {
@@ -68,11 +71,13 @@ func matrix(coordinate: [Int]) {
         }
     }
     
+    // EXIBINDO A MATRIZ INICIAL
     print("START")
     for k in m {
         print(k)
     }
     
+    // ALINHANDO O 1 NO CENTRO DO EIXO X
     while xPos != center[0] {
         if xPos &gt; center[0] {
             xPos -= 1
@@ -85,6 +90,7 @@ func matrix(coordinate: [Int]) {
         }
     }
     
+    // ALINHANDO O 1 NO CENTRO DO EIXO Y
     while yPos != center[1] {
         if yPos &gt; center[1] {
             yPos -= 1
@@ -97,6 +103,7 @@ func matrix(coordinate: [Int]) {
         }
     }
     
+    // INSERINDO O 1 NA MATRIZ
     for c in 1...m.count {
         if c == xPos {
             for r in 1...m.count {
@@ -107,13 +114,14 @@ func matrix(coordinate: [Int]) {
         }
     }
     
-    
+    // EXIBINDO A NOVA MATRIZ 
     print("")
     print("NEW")
     for r in m {
         print(r)
     }
     
+    // EXIBINDO O NÚMERO DE MOVIMENTOS
     print("")
     print("MOVIMENTOS PARA CENTRALIZAR: \(moves)")
 }
@@ -121,7 +129,7 @@ func matrix(coordinate: [Int]) {
 matrix(coordinate: [4,1])
 </string>
 			<key>ModifiedRange</key>
-			<string>{0, 2737}</string>
+			<string>{0, 3088}</string>
 			<key>OriginalContent</key>
 			<string>
 </string>

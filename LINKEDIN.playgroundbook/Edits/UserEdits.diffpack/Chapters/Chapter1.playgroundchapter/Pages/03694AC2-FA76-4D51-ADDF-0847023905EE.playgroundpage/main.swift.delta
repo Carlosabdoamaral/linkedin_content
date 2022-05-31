@@ -26,39 +26,24 @@
  when the strings are compared.
  */
 
-func petyaAndStrings(s1:String, s2:String) -&gt; Int {
-    var x : [String] = []
-    var y : [String] = []
-    var xCountIsGreater : Bool = false 
-    var checks : [Bool] = []
-    
-    for c in s1 {
-        var ch : String = c.uppercased()
-        x.append(ch)
+func petyaAndStrings(s1:String, s2:String) {
+    if s1.count &gt; s2.count {
+        print("1")
     }
     
-    for c in s2 {
-        var ch : String = c.uppercased()
-        y.append(ch)
+    else if s1.count &lt; s2.count {
+        print("-1")
     }
     
-    if x.count &gt;= y.count { xCountIsGreater = true }
-    
-    if xCountIsGreater {
-        for i in 0..&lt;x.count {
-            if y[i] != nil {
-                print(y[i])
-            }
-        }
+    else {
+        print("0")
     }
-    
-    return 0
 }
 
-petyaAndStrings(s1: "abas", s2: "Abz")
+petyaAndStrings(s1: "abs", s2: "Abz")
 </string>
 			<key>ModifiedRange</key>
-			<string>{0, 1568}</string>
+			<string>{0, 1193}</string>
 			<key>OriginalContent</key>
 			<string>
 </string>
